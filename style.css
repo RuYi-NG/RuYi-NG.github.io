@@ -1,0 +1,121 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#8b97a6;
+  --accent:#5ed0ff;
+  --surface:#0b1220;
+  --text:#e6eef6;
+  --gap:1.25rem;
+  --maxw:1100px;
+  --radius:12px;
+  font-size:16px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,#071020 0%, #0b1624 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+.container{
+  width:calc(100% - 2rem);
+  max-width:var(--maxw);
+  margin:0 auto;
+}
+
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{
+  left:10px; top:10px; width:auto; height:auto; padding:8px 12px;
+  background:#fff; color:#000; z-index:9999;
+}
+
+/* Header */
+.site-header{
+  padding:1rem 0;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.header-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.brand h1{margin:0;font-size:1.1rem;letter-spacing:0.6px}
+.brand .sub{margin:0;color:var(--muted);font-size:0.9rem}
+
+/* Nav */
+.site-nav{
+  display:flex;gap:1rem;align-items:center;
+}
+.site-nav a{padding:.35rem .6rem;border-radius:6px}
+.site-nav .cta{background:rgba(255,255,255,0.03);padding:.4rem .7rem}
+
+/* Mobile nav toggle */
+.nav-toggle{display:none;background:none;border:0;padding:.35rem;cursor:pointer}
+.nav-toggle span{display:block;width:20px;height:2px;background:var(--text);margin:4px 0;border-radius:2px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:center;padding:3rem 0}
+.hero-left h2{font-size:1.8rem;margin:.2rem 0}
+.lead{color:var(--muted);margin-top:.6rem}
+.hero-right img{width:100%;border-radius:10px;display:block;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+
+/* Sections */
+section{padding:2.2rem 0}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between}
+.muted{color:var(--muted)}
+
+/* Work list */
+.work-list{list-style:none;padding:0;margin:1rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.work-list li{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px}
+
+/* Projects grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;margin-top:1rem}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;overflow:hidden;cursor:pointer;
+  transition:transform .18s ease,box-shadow .18s ease;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.card img{width:100%;height:160px;object-fit:cover;display:block}
+.card .card-body{padding:1rem}
+.card h4{margin:0 0 .35rem}
+.card p{margin:0;color:var(--muted);font-size:0.95rem}
+
+/* Prototypes */
+.proto-list{display:flex;gap:.6rem;flex-wrap:wrap}
+.proto{background:rgba(255,255,255,0.03);padding:.6rem .9rem;border-radius:9px;font-size:.95rem}
+
+/* About/socials */
+.socials{margin-top:1rem;display:flex;gap:.5rem}
+.icon-link{display:inline-flex;align-items:center;justify-content:center;padding:.4rem;border-radius:8px;background:rgba(255,255,255,0.02);min-width:40px}
+
+/* Footer */
+.site-footer{padding:1.2rem 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);text-align:center}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:2rem;background:rgba(3,6,12,0.6);z-index:40}
+.modal[aria-hidden="false"]{display:flex}
+.modal-dialog{max-width:900px;width:100%;background:var(--surface);padding:1.2rem;border-radius:12px;position:relative}
+.modal-close{position:absolute;right:.6rem;top:.4rem;background:none;border:0;color:var(--muted);font-size:1.8rem;cursor:pointer}
+.modal-body img{max-width:100%;border-radius:8px;margin-bottom:.6rem}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero{grid-template-columns:1fr; padding:2rem 0}
+  .hero-right{order:-1}
+  .nav-toggle{display:inline-block}
+  .site-nav{position:absolute;right:12px;top:72px;background:rgba(7,10,15,0.95);padding:.8rem;border-radius:10px;flex-direction:column;display:none}
+  .site-nav a{display:block}
+  .site-nav.open{display:flex}
+}

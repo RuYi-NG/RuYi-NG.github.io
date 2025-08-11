@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio — Your Name. Game developer / technical artist. Selected projects and prototypes." />
+  <title>Your Name — Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#0f1724" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#home"><h1>Your Name</h1></a>
+        <p class="sub">Technical Combat Designer • Technical Artist</p>
+      </div>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="siteNav" class="site-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#prototypes">Prototypes</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero container">
+      <div class="hero-left">
+        <h2>Hi — I'm <strong>Your Name</strong></h2>
+        <p class="lead">I design and prototype combat systems, gameplay tools, and technical art for realtime games. Currently working on action titles using Unreal Engine and Unity.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn">Selected Work</a>
+          <a href="#about" class="btn ghost">About</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="images/project1.jpg" alt="Screenshot preview" loading="lazy">
+      </div>
+    </section>
+
+    <section id="work" class="work container">
+      <h3>Professional Work</h3>
+      <ul class="work-list">
+        <li>
+          <h4>Phantom Blade Zero</h4>
+          <p>Unreal Engine 5 — Combat Designer (June 2024)</p>
+        </li>
+        <li>
+          <h4>Saleblazers</h4>
+          <p>Unity — Systems & Prototyping</p>
+        </li>
+        <li>
+          <h4>Bugnauts!</h4>
+          <p>Third-person action — Lead Designer</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects" class="projects container">
+      <div class="section-head">
+        <h3>Selected Projects</h3>
+        <p class="muted">Click a card to read more</p>
+      </div>
+      <div id="projectsGrid" class="grid"></div>
+    </section>
+
+    <section id="prototypes" class="prototypes container">
+      <h3>Prototypes</h3>
+      <div class="proto-list">
+        <a class="proto">Huli — combat prototype</a>
+        <a class="proto">Combat Demo Practice</a>
+        <a class="proto">Procedural FX tests</a>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h3>About</h3>
+      <p>I’m a technical artist and gameplay designer who loves prototyping combat systems, shader work, and tooling for designers. I work primarily in Unreal and Unity.</p>
+      <p id="contact">Location: Vancouver, Canada • <a href="mailto:you@example.com">you@example.com</a></p>
+      <div class="socials">
+        <!-- simple svg icons -->
+        <a href="#" aria-label="LinkedIn" title="LinkedIn" class="icon-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM9 8h4.8v2.2h.1c.67-1.27 2.3-2.6 4.74-2.6C23 7.6 24 10 24 14v10h-5v-8.9c0-2.13-.04-4.87-2.96-4.87-2.96 0-3.41 2.31-3.41 4.7V30H9V8z" fill="currentColor"/></svg>
+        </a>
+        <a href="#" class="icon-link" aria-label="YouTube">YT</a>
+        <a href="#" class="icon-link" aria-label="Instagram">IG</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name — <a href="mailto:you@example.com">Email</a></p>
+    </div>
+  </footer>
+
+  <!-- Project modal (hidden by default) -->
+  <div id="projectModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Close project" id="modalClose">&times;</button>
+      <div class="modal-body" id="modalContent" tabindex="0">
+        <!-- Filled by script -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
