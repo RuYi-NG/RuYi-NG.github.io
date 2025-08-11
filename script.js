@@ -11,30 +11,30 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 
-  // Projects data - replace/extend this array with your projects
+  // Projects data - 
   const projects = [
     {
       id: 'p1',
-      title: 'Combat Demo — Huli',
-      thumb: 'images/project1.jpg',
-      short: 'Prototype combat loop, combo system and hit feedback.',
-      long: `<p>Worked on character movement, combo timing, and hit stop. Implemented animation-driven attack blend trees and enemy state machines.</p>
-             <p><strong>Engine:</strong> Unreal Engine 5 • <strong>Role:</strong> Technical Designer</p>`
+      title: 'By the Blade',
+      thumb: 'images/bythebladebanner.jpg',
+      short: 'Isometric hack and slash game with a focus on timed parries',
+      long: `<p>Worked on designing and implementing player's actions, state machine, animation timings. Contributed to combat feedbacks with both player and enemy attack VFXs.</p>
+             <p><strong>Engine:</strong> Unity • <strong>Role:</strong> Technical Designer, Combat Designer, VFX artist</p>`
     },
-    {
-      id: 'p2',
-      title: 'Procedural FX Tests',
-      thumb: 'images/project2.jpg',
-      short: 'Realtime particle shaders and trail systems.',
-      long: `<p>Built GPU-driven ribbon trails, dissolve effects, and procedural textures for slash FX. Focused on performance & artist control.</p>`
-    },
-    {
-      id: 'p3',
-      title: 'AI Tactics Prototype',
-      thumb: 'images/project3.jpg',
-      short: 'Small AI tactics system for flanking and cover.',
-      long: `<p>Prototype included behavior trees and lightweight squad coordination for varied combat encounters.</p>`
-    }
+    // {
+    //   id: 'p2',
+    //   title: 'Procedural FX Tests',
+    //   thumb: 'images/project2.jpg',
+    //   short: 'Realtime particle shaders and trail systems.',
+    //   long: `<p>Built GPU-driven ribbon trails, dissolve effects, and procedural textures for slash FX. Focused on performance & artist control.</p>`
+    // },
+    // {
+    //   id: 'p3',
+    //   title: 'AI Tactics Prototype',
+    //   thumb: 'images/project3.jpg',
+    //   short: 'Small AI tactics system for flanking and cover.',
+    //   long: `<p>Prototype included behavior trees and lightweight squad coordination for varied combat encounters.</p>`
+    // }
   ];
 
   // Render project cards
