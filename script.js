@@ -19,15 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
       thumb: 'images/bythebladebanner.jpg',
       short: 'Isometric hack and slash game with a focus on timed parries',
       long: `<p>Worked on designing and implementing player's actions, state machine, animation timings. Contributed to combat feedbacks with both player and enemy attack VFXs.</p>
-             <p><strong>Engine:</strong> Unity • <strong>Role:</strong> Technical Designer, Combat Designer, VFX artist</p>`
+             <p><strong>Engine:</strong> Unity • <strong>Role:</strong> Technical Designer, Combat Designer, VFX artist</p>`,
+      itchUrl: 'https://mooncako.itch.io/by-the-blade'
     },
-    // {
-    //   id: 'p2',
-    //   title: 'Procedural FX Tests',
-    //   thumb: 'images/project2.jpg',
-    //   short: 'Realtime particle shaders and trail systems.',
-    //   long: `<p>Built GPU-driven ribbon trails, dissolve effects, and procedural textures for slash FX. Focused on performance & artist control.</p>`
-    // },
+    {
+      id: 'p2',
+      title: 'Beats and Bolts',
+      thumb: 'images/beatsandboltsbanner.jpg',
+      short: 'Rhythm boss rush game where the player needs to attack and evade on beat in a circular grid-based arena.',
+      long: `<p>Worked on Boss skill design and state machine, circular grid-based arena design and implementation.</p>
+             <p><strong>Engine:</strong> Unity • <strong>Role:</strong> Programmer, Designer</p>`,
+      itchUrl: 'https://noggindecay.itch.io/beats-and-bolts'
+    },
     // {
     //   id: 'p3',
     //   title: 'AI Tactics Prototype',
@@ -69,10 +72,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.getElementById('modalClose');
 
   function openModal(project){
+    const itchLinkHtml = project.itchUrl ? `
+      <div class="project-links">
+        <a href="${project.itchUrl}" target="_blank" rel="noopener noreferrer" class="itch-link">
+          🎮 Play on itch.io
+        </a>
+      </div>
+    ` : '';
+
     modalContent.innerHTML = `
       <h2 id="modalTitle">${project.title}</h2>
       <img src="${project.thumb}" alt="${project.title} image">
       ${project.long}
+      ${itchLinkHtml}
       <p><em>Close with ESC or the × button.</em></p>
     `;
     modal.setAttribute('aria-hidden', 'false');
